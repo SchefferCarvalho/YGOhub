@@ -14,10 +14,10 @@ body {
 
 .Box {
     width: 550px;
-    height: 370px;
+    height: 520px;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top: 130px;
+    padding-top: 150px;
     background: #fff;
     border-radius: 10%;
 }
