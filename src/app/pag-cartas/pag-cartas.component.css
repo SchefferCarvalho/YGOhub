@@ -1,0 +1,93 @@
+.Container {
+    width: 200vw;
+    height: 100vh;
+    background-color: #e6e6e6;
+    display: flex;
+}
+
+.BoxCarta {
+    /*background-color: aqua;*/
+    color: #713a87;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    left: 100px;
+}
+
+.BoxPesquisa {
+    background-color: white;
+    position: relative;
+    color: #713a87;
+    text-align: justify;
+    line-height: 1.4;
+    height: 600px;
+    width: 350px;
+    top: 150px;
+}
+
+.pPesquisa {
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.botaoPesquisa {
+    position: relative;
+    top: 35px;
+    width: 300px;
+    left: 25px;
+}
+
+.Opc1 {
+    position: relative;
+    top: 35px;
+    width: 300px;
+    left: 25px;
+}
+
+.Opc2 {
+    position: relative;
+    top: 45px;
+    width: 300px;
+    left: 25px;
+}
+
+.Opc3 {
+    position: relative;
+    top: 55px;
+    width: 300px;
+    left: 25px;
+}
+
+.BoxDetalhe {
+    position: relative;
+    width: 100px;
+    top: 60px;
+    left: 25px;
+}
+
+.BoxCheck {
+    position: relative;
+    left: 180px;
+    bottom:120px;
+}
+
+.BoxTodasCartas{
+    background-color:white;
+    position: relative;
+    width: 400px;
+    height: 250px;
+    top:150px;
+    left: 50px;
+}
+
+#pNomeCarta{
+    background-color:salmon;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    left: 25px;
+    top:25px;
+   
+    
+}

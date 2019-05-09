@@ -1,3 +1,217 @@
-<p>
-  pag-cartas works!
-</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cartas</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="pag-cartas.component.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+    <button class="w3-bar-item w3-teal w3-large" onclick="w3_close()"> &#9776;</button>
+    <a href=perfil.html class="w3-bar-item w3-button">
+      <i class=" material-icons" style="font-size:20px"> account_circle </i> Usuário</a>
+
+    <a href=carta.html class="w3-bar-item w3-button">
+      <i class=" material-icons" style="font-size:20px"> apps </i>Cartas</a>
+
+    <a href="#" class="w3-bar-item w3-button">
+      <i class=" material-icons" style="font-size:20px">filter_none</i>
+      Decks</a>
+
+    <a href="#" class="w3-bar-item w3-button">
+      <i class=" material-icons" style="font-size:20px">star</i>Favoritos</a>
+  </div>
+
+  <div id="main">
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+    </div>
+
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.width = "10%";
+      document.getElementById("mySidebar").style.display = "block";
+      // document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      // document.getElementById("openNav").style.display = "inline-block";
+    }
+  </script>
+
+
+
+  <div class="Container">
+    <div class="BoxCarta">
+      <h3>Cartas</h3>
+    </div>
+
+    <div class="BoxPesquisa">
+      <p class="pPesquisa">Pesquisar</p>
+
+      <div class="botaoPesquisa">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+
+      <div class="Opc1">
+        <label>Browser Select</label>
+        <select class="browser-default">
+
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function () {
+            $('select').formSelect();
+          });
+        </script>
+      </div>
+
+      <div class="Opc2">
+        <label>Browser Select</label>
+        <select class="browser-default">
+
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function () {
+            $('select').formSelect();
+          });
+        </script>
+      </div>
+
+
+      <div class="Opc3">
+        <label>Browser Select</label>
+        <select class="browser-default">
+
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function () {
+            $('select').formSelect();
+          });
+        </script>
+      </div>
+
+      <div class="BoxDetalhe">
+        <div class="input-field col s6">
+          <input id="ATK" type="text" class="validate">
+          <label for="last_name">ATK</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="DEF" type="text" class="validate">
+          <label for="last_name">DEF</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="LVL" type="text" class="validate">
+          <label for="last_name">LVL</label>
+        </div>
+      </div>
+      <div class="BoxCheck">
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>1° Edição</span>
+            </label>
+          </p>
+        </form>
+
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>2° Edição</span>
+            </label>
+          </p>
+        </form>
+
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>3° Edição</span>
+            </label>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="BoxTodasCartas">
+      <p id="pNomeCarta">Nome da Carta</p>
+      <div class="ImagemCarta">
+        <img>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
