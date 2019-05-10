@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
+import { Routes } from '@angular/router'
 
 @Component({
   selector: 'app-inicio',

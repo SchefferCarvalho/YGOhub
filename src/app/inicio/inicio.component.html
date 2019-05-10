@@ -8,52 +8,51 @@
 </head>
 
 <body>
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <app-search-bar></app-search-bar>
+    </div>
+    <div class="ui-g-12" style="background-color:#713a87">
 
-    <div class="pos-f-t">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h4 class="text-white">Collapsed content</h4>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
+      <div class="PaginaInicial">
+        <p class="Titulo"> YU GI OH! CARDS </p>
+
+        <br>
+
+        <p class="TextoYGO" style="color:white">
+          Foi criado com a intenção de auxiliar jogadores e
+          <br> colecionadores de cartas do jogo,facilitando a organização
+          <br> em relação as cartas já obtidas e as que faltam.
+          <br>
+          <br>
+          <button type="button" class="btn btn-dark" style="background-color: #ea9300;">Saiba mais
+          </button>
+        </p>
+
+      </div>
+      <div class="ui-g-12">
+        <div class="ui-g-4"></div>
+
+        <div class="ui-g-1">
+          <p-button style="color: #713a87" label="CARTAS" routerLink="/pag-cartas"></p-button>
+        </div>
+        <div class="ui-g-1">
+          <p-button style="color: #713a87" label="DECKS" routerLink="/pag-decks"></p-button>
+        </div>
+        <div class="ui-g-1">
+          <p-button style="color: #713a87" label="FAVORITOS" routerLink="/pag-favorito"></p-button>
+        </div>
+        <div class="ui-g-1">
+          <p-button style="color: #713a87" label="LOCAL" routerLink="/pag-favorito"></p-button>
+
         </div>
       </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="botaoPesquisa">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <a type="button" class="btn btn-dark" style="background-color:#713a87" href="/login">Search</a>
-          </form>
-        </div>
-      </nav>
-    </div>
-
-    <div class="PaginaInicial" style="background-color:#713a87">
-      <p class="Titulo"> YU GI OH! CARDS </p>
-      <br>
-
-      <p class="TextoYGO" style="color:white">
-        Foi criado com a intenção de auxiliar jogadores e
-        <br> colecionadores de cartas do jogo,facilitando a organização
-        <br> em relação as cartas já obtidas e as que faltam.
-        <br>
-        <br>
-        <button type="button" class="btn btn-dark" style="background-color: #ea9300;">Saiba mais
-        </button>
-      </p>
-    </div>
-
-    <div class="Botoes">
-      <a href="/pag-cartas" class="BotoesIniciais" role="button">CARTAS</a>
-      <a href="/pag-decks" class="BotoesIniciais" role="button">DECKS</a>
-      <a href="/pag-favorito" class="BotoesIniciais" role="button">FAVORITOS</a>
-      <a href="#" class="BotoesIniciais" role="button">LOCAL</a>
     </div>
 
 
+
+
+  </div>
 </body>
 
 </html>

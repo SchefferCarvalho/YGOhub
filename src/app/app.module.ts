@@ -11,6 +11,10 @@ import { InicioComponent } from './inicio/inicio.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { routing } from './app-routing.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import {ButtonModule} from 'primeng/button';
+
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,14 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     PagDecksComponent,
     PagFavoritoComponent,
     InicioComponent,
-    PerfilComponent
+    PerfilComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    ButtonModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
