@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SidebarModule} from 'primeng/sidebar';
 
 @Component({
   selector: 'app-search-bar',
@@ -13,3 +14,4 @@ export class SearchBarComponent implements OnInit {
   }
 
 }
+
