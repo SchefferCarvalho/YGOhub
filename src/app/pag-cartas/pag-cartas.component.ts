@@ -17,7 +17,7 @@ export class PagCartasComponent implements OnInit {
   ngOnInit() {
     this.service.listTipoCarta().subscribe(dados => this.CartasTipo = dados);
     this.service.listCarta().subscribe(dados => this.Cartas = dados);
-    
+
   }
 
 
