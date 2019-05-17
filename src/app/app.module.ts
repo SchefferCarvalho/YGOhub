@@ -17,6 +17,8 @@ import {ButtonModule} from 'primeng/button';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import {SidebarModule} from 'primeng/sidebar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     
 
     
+    SidebarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
