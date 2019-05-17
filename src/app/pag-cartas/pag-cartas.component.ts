@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartasTipo, Cartas } from '../carta';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-pag-cartas',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagCartasComponent implements OnInit {
 
-  constructor() { }
+  CartasTipo: CartasTipo[];
+  Cartas: Cartas[];
+
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    this.service.listTipoCarta().subscribe(dados => this.CartasTipo = dados);
+    this.service.listCarta().subscribe(dados => this.Cartas = dados);
+    
   }
+
+
+
 
 }

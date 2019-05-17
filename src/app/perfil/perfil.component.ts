@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../carta';
+import { AppService } from '../app.service';
+
 
 @Component({
   selector: 'app-perfil',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  Usuario: Usuario[];
+
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    this.service.listUsuario().subscribe(dados => this.Usuario = dados);
   }
 
 }

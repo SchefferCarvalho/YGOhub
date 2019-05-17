@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
+import { Deck } from '../carta';
 
 @Component({
   selector: 'app-pag-decks',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagDecksComponent implements OnInit {
 
-  constructor() { }
+  Deck: Deck[];
+
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    this.service.listDeck().subscribe(dados => this.Deck = dados);
   }
 
 }

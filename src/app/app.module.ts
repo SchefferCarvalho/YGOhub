@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {  ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CriarDecksComponent } from './criar-decks/criar-decks.component';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +17,7 @@ import {ButtonModule} from 'primeng/button';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,11 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     BrowserModule,
     routing,
     ButtonModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule,
+    
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
