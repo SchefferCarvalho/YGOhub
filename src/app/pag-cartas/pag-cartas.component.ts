@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CartasTipo, Cartas } from '../carta';
 import { AppService } from '../app.service';
 
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { DropdownModule } from 'primeng/dropdown';
+import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+
 @Component({
   selector: 'app-pag-cartas',
   templateUrl: './pag-cartas.component.html',
@@ -20,7 +25,7 @@ export class PagCartasComponent implements OnInit {
 
   }
 
-
-
-
 }
+
+
+

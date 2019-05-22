@@ -21,45 +21,11 @@
       <h3>Cartas</h3>
     </div>
 
-    <div class="BoxPesquisa">
+    <div class="BoxPesquisa" style="padding-left: 10px">
       <p class="pPesquisa">Pesquisar</p>
+      <p-autoComplete (completeMethod)="search($event) " placeholder="Nome da carta"></p-autoComplete>
 
-      <div class="botaoPesquisa">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-
-      <div class="Opc1">
-        <label>Browser Select</label>
-        <select class="browser-default">
-
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-          });
-
-          // Or with jQuery
-
-          $(document).ready(function () {
-            $('select').formSelect();
-          });
-        </script>
-      </div>
-
-      <div class="Opc2">
+      <div>
         <label>Browser Select</label>
         <select class="browser-default">
 
@@ -83,7 +49,8 @@
       </div>
 
 
-      <div class="Opc3">
+
+      <div class="ui-g">
         <label>Browser Select</label>
         <select class="browser-default">
 
@@ -106,50 +73,32 @@
         </script>
       </div>
 
-      <div class="BoxDetalhe">
-        <div class="input-field col s6">
-          <input id="ATK" type="text" class="validate">
-          <label for="last_name">ATK</label>
-        </div>
 
-        <div class="input-field col s6">
-          <input id="DEF" type="text" class="validate">
-          <label for="last_name">DEF</label>
+      <div class="ui-g-12">
+        <div class="ui-g-6">
+          <input type="text" placeholder="ATK" pInputText />
         </div>
-
-        <div class="input-field col s6">
-          <input id="LVL" type="text" class="validate">
-          <label for="last_name">LVL</label>
+        <div class="ui-g-6">
+          <p-checkbox name="group1" value="ATK" label="Ataque"></p-checkbox>
         </div>
       </div>
-      <div class="BoxCheck">
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span>1° Edição</span>
-            </label>
-          </p>
-        </form>
-
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span>2° Edição</span>
-            </label>
-          </p>
-        </form>
-
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span>3° Edição</span>
-            </label>
-          </p>
-        </form>
+      <div class="ui-g-12">
+        <div class="ui-g-6">
+          <input type="text" placeholder="DEF" pInputText />
+        </div>
+        <div class="ui-g-6">
+          <p-checkbox name="group1" value="DEF" label="Defesa"></p-checkbox>
+        </div>
       </div>
+      <div class="ui-g-12">
+        <div class="ui-g-6">
+          <input type="text" placeholder="LVL" pInputText />
+        </div>
+        <div class="ui-g-6">
+          <p-checkbox name="group1" value="LVL" label="Level"></p-checkbox>
+        </div>
+      </div>
+
     </div>
 
     <div class="BoxTodasCartas">
