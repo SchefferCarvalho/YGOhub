@@ -25,7 +25,7 @@ function execSQLQuery(sqlQry, res){
     host     : 'localhost',
     port     : 3306,
     user     : 'root',
-    password : 'chocolate008',
+    password : 'xxxxxx',
     database : 'Cup'
   });
 
