@@ -46,7 +46,7 @@ export class AppService {
   }
 
   post(usuario){
-    return this.http.post(this.API+'/tb_usuario',usuario).pipe(take(1));
+    return this.http.post(this.API+'/tb_usuario',JSON.stringify(usuario)).pipe(take(1));
   }
   
 }

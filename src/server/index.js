@@ -25,7 +25,7 @@ function execSQLQuery(sqlQry, res){
     host     : 'localhost',
     port     : 3306,
     user     : 'root',
-    password : 'xxxxxx',
+    password : 'chocolate008',
     database : 'Cup'
   });
 
@@ -59,17 +59,12 @@ router.get('/ta_carta_has_ta_deck', (req, res) =>{
   execSQLQuery('SELECT * FROM ta_carta_has_ta_deck', res);
 })
 
-router.post('/usuario', (req, res) => {
-  const nome = req.body.nome;
-  const email = req.body.email;
-  const nick = req.body.nick;
-  const password = req.body;
-  execSQLQuery(`INSERT INTO tb_usuario(nme_usua,email_usua,pwd_usua,nickme_usua)VALUES('${nome}','${email}','${password}','${nick}')`, res);
+router.post('/tb_usuario', (req, res) => {
+  const email = req.body.email_usua;
+  const nome = req.body.nme_usua;
+  const password = req.body.pwd_usua;
+  const nick = req.body.nicknme_usua;
+
+  execSQLQuery(`INSERT INTO tb_usuario(email_usua,nme_usua,pwd_usua,nicknme_usua)VALUES('${email}','${nome}','${password}','${nick}')`, res);
 });
 
-
-router.post('/Clientes', (req, res) =>{
-    const nome = req.body.nome.substring(0,150);
-    const cpf = req.body.cpf.substring(0,11);
-    execSQLQuery(`INSERT INTO Clientes(Nome, CPF) VALUES('${nome}','${cpf}')`, res);
-});

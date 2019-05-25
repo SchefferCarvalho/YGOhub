@@ -21,12 +21,28 @@ export interface Deck{
     idt_usuario:number;
 }
 
-export interface Usuario{
-    id: number;
+export class Usuario{
     email_usua: string;
     nme_usua: string;
-    pwd_usua: string;
     nicknme_usua: string;
+    pwd_usua: string;
+    
+
+    constructor(
+        email_usua: string,
+        nme_usua: string,
+        nicknme_usua: string,
+        pwd_usua: string
+       
+        
+        ){
+            this.email_usua = email_usua;
+            this.nme_usua = nme_usua;
+            this.nicknme_usua = nicknme_usua;
+            this.pwd_usua = pwd_usua;
+          
+
+    }
+
 
 }
-
