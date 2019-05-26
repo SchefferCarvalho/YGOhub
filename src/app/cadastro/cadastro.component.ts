@@ -16,6 +16,7 @@ export class CadastroComponent implements OnInit {
   email
   password
   nick
+  dado 
   usuario: Usuario
 
   constructor(private service: AppService) { }
@@ -28,9 +29,10 @@ export class CadastroComponent implements OnInit {
       this.password
 
     );
+    this.dado = JSON.stringify(this.usuario);
 
 
-    this.service.post(JSON.stringify(this.usuario)).subscribe(
+    this.service.post(this.dado).subscribe(
       success => console.log('sucesso')
     )
 

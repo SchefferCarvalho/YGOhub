@@ -1,13 +1,14 @@
-const express = require('express');
-const app = express();         
-const bodyParser = require('body-parser');
-const port = 3000; //porta padrão
-const mysql = require('mysql');
+var express = require('express');
+var app = express();         
+var bodyParser = require('body-parser');
+var port = 3000; //porta padrão
+var mysql = require('mysql');
 
 
 //configurando o body parser para pegar POSTS mais tarde
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.text());
+
 
 
 //definindo as rotas
@@ -25,7 +26,7 @@ function execSQLQuery(sqlQry, res){
     host     : 'localhost',
     port     : 3306,
     user     : 'root',
-    password : 'xxxxxxxx',
+    password : 'xxxxxxxxxx',
     database : 'Cup'
   });
 
@@ -60,11 +61,19 @@ router.get('/ta_carta_has_ta_deck', (req, res) =>{
 })
 
 router.post('/tb_usuario', (req, res) => {
-  const email = req.body.email_usua;
-  const nome = req.body.nme_usua;
-  const password = req.body.pwd_usua;
-  const nick = req.body.nicknme_usua;
+  var obj = JSON.parse(req.body);
+ /* console.log(obj.email_usua);
+  console.log(obj.nme_usua);
+  console.log(obj.pwd_usua);
+  console.log(obj.nicknme_usua);*/
+  
+  var email = obj.email_usua;
+  var nome = obj.nme_usua;
+  var password = obj.pwd_usua;
+  var nick = obj.nicknme_usua;
+  
 
   execSQLQuery(`INSERT INTO tb_usuario(email_usua,nme_usua,pwd_usua,nicknme_usua)VALUES('${email}','${nome}','${password}','${nick}')`, res);
+  
 });
 
