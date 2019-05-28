@@ -8,12 +8,20 @@
 </head>
 
 <body>
-  <div class="ui-g">
-    <div class="ui-g-12">
-      <app-search-bar></app-search-bar>
-    </div>
-    <div class="ui-g-12" style="background-color:#713a87">
-
+  <div class="Nav">
+      <nav>
+          <div class="nav-wrapper" style="background-color:#ea9300">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <!--<a class="waves-effect waves-light btn"  href ="\login" style="background-color:#713a87">Login</a> --> 
+             <!-- <li><a href="collapsible.html">JavaScript</a></li>--> 
+              <li><a href="\login">Login</a></li>  
+            </ul>
+          </div>
+        </nav>
+              
+  </div>
+  
       <div class="PaginaInicial">
         <p class="Titulo"> YU GI OH! CARDS </p>
 
@@ -25,31 +33,12 @@
           <br> em relação as cartas já obtidas e as que faltam.
           <br>
           <br>
-          <button type="button" class="btn btn-dark" style="background-color: #ea9300;">Saiba mais
-          </button>
+          <a class="waves-effect waves-light btn"  href ="#" style="background-color:#ea9300;color: white">Saiba mais</a>
+          
         </p>
 
       </div>
-      <div class="ui-g-12">
-        <div class="ui-g-4"></div>
 
-        <div class="ui-g-8">
-          <p-button style="color: #713a87; padding-left: 5px" label="CARTAS" routerLink="/pag-cartas"></p-button>
-
-          <p-button style="color: #713a87; padding-left: 5px" label="DECKS" routerLink="/pag-decks"></p-button>
-
-          <p-button style="color: #713a87; padding-left: 5px" label="FAVORITOS" routerLink="/pag-favorito"></p-button>
-
-          <p-button style="color: #713a87; padding-left: 5px" label="LOCAL" routerLink="/pag-favorito"></p-button>
-
-        </div>
-      </div>
-    </div>
-
-
-
-
-  </div>
 </body>
 
 </html>
