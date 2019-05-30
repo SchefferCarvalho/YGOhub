@@ -9,18 +9,19 @@ import { PagFavoritoComponent } from './pag-favorito/pag-favorito.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PagDecksComponent } from './pag-decks/pag-decks.component';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 
 
 const APP_ROUTES: Routes = [
   {path: '', component: InicioComponent},
-  {path: 'criar-decks', component: CriarDecksComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'pag-cartas', component: PagCartasComponent},
-  {path: 'pag-decks', component: PagDecksComponent},
-  {path: 'pag-favorito', component: PagFavoritoComponent},
-  {path: 'perfil', component: PerfilComponent},
-  {path: 'cadastro', component: CadastroComponent}
+  {path: 'criar-decks', component: CriarDecksComponent,/*canActivate:[AuthGuardService]*/},
+  {path: 'login', component: LoginComponent,},
+  {path: 'pag-cartas', component: PagCartasComponent, /*canActivate:[AuthGuardService]*/},
+  {path: 'pag-decks', component: PagDecksComponent, /*canActivate:[AuthGuardService]*/},
+  {path: 'pag-favorito', component: PagFavoritoComponent, /*canActivate:[AuthGuardService]*/},
+  {path: 'perfil', component: PerfilComponent, /*canActivate:[AuthGuardService]*/},
+  {path: 'cadastro', component: CadastroComponent,}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

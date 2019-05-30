@@ -10,12 +10,13 @@ import { AppService } from '../app.service';
 })
 export class PerfilComponent implements OnInit {
 
-  Usuario: Usuario[];
+  Usuario: Usuario;
 
   constructor(private service: AppService) { }
 
   ngOnInit() {
     this.service.listUsuario().subscribe(dados => this.Usuario = dados);
+    console.log(this.Usuario);
   }
 
 }

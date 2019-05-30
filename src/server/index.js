@@ -9,6 +9,12 @@ var mysql = require('mysql');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 
 //definindo as rotas
@@ -26,7 +32,7 @@ function execSQLQuery(sqlQry, res){
     host     : 'localhost',
     port     : 3306,
     user     : 'root',
-    password : 'xxxxxxxxxx',
+    password : 'xxxxxxxxx',
     database : 'Cup'
   });
 
@@ -53,7 +59,9 @@ router.get('/tb_deck', (req, res) =>{
 })
 
 router.get('/tb_usuario', (req, res) =>{
-  execSQLQuery('SELECT * FROM tb_usuario', res);
+
+  execSQLQuery('SELECT email_usua, pwd_usua FROM tb_usuario', res);
+  
 })
 
 router.get('/ta_carta_has_ta_deck', (req, res) =>{

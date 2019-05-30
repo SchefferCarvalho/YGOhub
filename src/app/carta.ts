@@ -40,7 +40,22 @@ export class Usuario {
         this.nme_usua = nme_usua;
         this.nicknme_usua = nicknme_usua;
         this.pwd_usua = pwd_usua;
-      }
+    }
 
 
 }
+
+export class Login {
+    email_usua: string;
+    pwd_usua: string;
+
+    constructor(
+        email_usua: string,
+        pwd_usua: string
+    ) {
+        this.email_usua = email_usua
+        this.pwd_usua = pwd_usua
+
+    }
+}
+

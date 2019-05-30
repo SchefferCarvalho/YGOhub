@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CartasTipo, Cartas, Usuario, Deck } from './carta';
+import { CartasTipo, Cartas, Usuario, Deck,Login } from './carta';
 import { tap, take } from 'rxjs/operators';
 
 
@@ -32,10 +32,11 @@ export class AppService {
   }
 
   listUsuario(){
-    return this.http.get<Usuario[]>(this.API+'/tb_usuario')
-    .pipe(
-      tap(console.log)
-    );
+    return this.http.get<Usuario>(this.API+'/tb_usuario').pipe(tap(console.log))
+  }
+
+  login(){
+    return this.http.get<Login>(this.API+'/tb_usuario').pipe(tap(console.log));
   }
 
   listDeck(){

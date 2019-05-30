@@ -27,6 +27,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { DropdownModule } from 'primeng/dropdown';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
+import { AppService } from './app.service';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,7 @@ import { InputTextModule } from 'primeng/inputtext';
 
 
   ],
-  providers: [],
+  providers: [AppService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
