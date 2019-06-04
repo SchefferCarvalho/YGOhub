@@ -1,20 +1,22 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PagCartasComponent } from './pag-cartas.component';
+import { CriarDeckPage } from './criar-deck.page';
 
-describe('PagCartasComponent', () => {
-  let component: PagCartasComponent;
-  let fixture: ComponentFixture<PagCartasComponent>;
+describe('CriarDeckPage', () => {
+  let component: CriarDeckPage;
+  let fixture: ComponentFixture<CriarDeckPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PagCartasComponent ]
+      declarations: [ CriarDeckPage ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PagCartasComponent);
+    fixture = TestBed.createComponent(CriarDeckPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
